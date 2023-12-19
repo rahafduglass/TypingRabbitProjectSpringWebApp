@@ -1,95 +1,127 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: url(https://picsum.photos/3000/2000/?image=1015);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 25%;
-    height: 100%;
-    background-color: #03a9f4;
-    opacity: 0.8;
-}
-
-.form {
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    width: 350px;
-    min-height: 400px;
-    background-color: #fff;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
-    padding: 50px;
-    box-sizing: border-box;
-}
-
-.form h2 {
-    color: #777;
-    margin: 0 0 40px;
-    padding: 0;
-}
-
-.form .input-box {
-    position: relative;
-    margin: 20px 0;
-}
-
-.form .input-box input {
+body,html{
     width: 100%;
-    font-size: 16px;
-    border: none;
-    border-bottom: 2px solid #777;
-    outline: none;
-    padding: 10px;
-    padding-left: 30px;
-    box-sizing: border-box;
-    font-weight: bold;
-    color: #777;
+    height: 100%;
+    margin:0;
+    /* background: linear-gradient(to left,white,rgba(6, 211, 6, 0.918));*/
 }
 
-.form .input-box input:focus,
-.form .input-box input:valid {
-    border-bottom-color: #03a9f4;
+/******************header*************************/
+header{
+    display: flex;
+    justify-content: flex-end;
 }
+ul{
+    list-style: none;
+    display: flex;
 
-.form .input-box .fa {
-    position: absolute;
-    top: 8px;
-    left: 5px;
-    font-size: 18px;
-    color: #777;
+
 }
+li{
+    font-size: 1.2em;
+    font-weight: 500;
+    padding:10px 20px;
+    text-decoration: underline;
 
-.form .input-box input[type="submit"] {
-    border: none;
+
+}
+.right-item{
+    margin-left: auto;
+}
+a:hover{
     cursor: pointer;
-    background-color: #03a9f4;
-    color: #fff;
-    font-weight: bold;
-    transition: 0.5s;
+    color:green;
+
 }
 
-.form .input-box input[type="submit"]:hover {
-    background-color: #ff4987;
+/***************Form*************************/
+.container{
+    height: 100%;
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center; /*works without the need of wrap*/
+
 }
 
-.form a {
-    text-decoration: none;
-    color: #777;
-    margin-top: 20px;
-    font-weight: bold;
-    display: inline-block;
-    transition: 0.5s;
+/* it's not responsive !!!!!!!!!*/
+form{
+    background-color: rgb(0, 0, 0);
+    width: 60vh;
+    height: 60vh;
+    padding: 40px;
+    border-radius: 30px;
+
+
+}
+#u_g_9_gZ{
+    position: absolute;
+    margin:0 0 0 55vh;
+}
+#u_g_9_gZ:hover{
+    cursor: pointer;
+}
+h1{
+    font-size: 25px;
+    color:white;
+    margin:0 2vh 5vh;
+
 }
 
-.form a:hover {
-    color: #ff4987;
+input{
+    width:50vh;
+    padding: 2vh;
+    margin:2vh;
+    border-style: none;
+    font-size: 15px;
+    border-radius: 30px;
+
+
+}
+input:after{
+
+}
+.short-input{
+    width:20.5vh;
+}
+label{
+    color:rgb(235, 128, 6);
+    font-size:  1.2rem;
+}
+
+.btn1{
+    background-color:rgba(6, 211, 6, 0.918);
+    color:white;
+    border-style: none;
+    border-radius:20px;
+    font-size:1em;
+    font-weight: 500;
+    padding:10px 20px;
+
+
+}
+.cen-btn{
+    margin:0 42vh 0;
+}
+.btn1:hover{
+    background-color:rgba(0, 255, 0, 0.918);
+    cursor:pointer;
+}
+
+#listInput{
+    width:20px;
+}
+/****************** animation*****************************/
+
+.animation-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    width:50px;
+
+}
+
+.obj1{
+    left: 20%;
+    animation: osc-l 2.5s ease infinite;
 }
