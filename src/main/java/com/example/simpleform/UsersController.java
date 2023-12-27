@@ -26,6 +26,10 @@ public class UsersController {
         model.addAttribute("loginRequest",new UsersModel());
         return"login_page";
     }
+    @GetMapping("/typingSpeedPage")
+    public String getTypingSpeedPage(){
+        return"typingSpeed_page";
+    }
     @PostMapping("/register")
     public String register(@ModelAttribute UsersModel usersModel){ // the model Attribute's "registerRequest" values will be assigned to the userModel.
         System.out.println("register request: " + usersModel);
@@ -40,8 +44,9 @@ public class UsersController {
         if(authenticated.isPresent()){
             model.addAttribute("userLogin",usersModel.getLogin());
             //
-            return "personal_page";
+            return "typingSpeed_page";
         }else
             return "error_page" ;
     }
+
 }

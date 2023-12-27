@@ -2,29 +2,36 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login page</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/login.css">
+    <link rel="shotrcut icon" type="img/png" href="https://th.bing.com/th/id/OIP.FWW7CW_Z0LxK6HgGDYpOlQHaHa?w=168&h=180&c=7&r=0&o=5&pid=1.7">
+    <script th:src="@{/js/login.js}" defer="defer"></script>
 </head>
 <body>
+
+<header>
+    <h1></h1>
+    <nav>
+        <ul>
+            <a href="/index.html"><li class="right-item">Home</li></a>
+            <a href="/register"><li> Register </li></a>
+        </ul>
+    </nav>
+</header>
 <div class="container">
-    <form method="post" action="/login" th:object="${loginRequest}">
-        <h2>Login</h2>
-        <div class="input-box">
-            <i class="fa fa-user" aria-hidden="true"></i>
-            <label>
-                <input type="text" name="login" placeholder="Login" required>
-            </label>
-        </div>
-        <div class="input-box">
-            <i class="fa fa-unlock-alt" aria-hidden="true"></i>
-            <label>
-                <input type="password" name="password" placeholder="Password"  required>
-            </label>
-        </div>
-        <span class="cen-btn">
-            <button class="btn1" type="submit" name="sign-in" >Login</button>
-        </span >
-        <a href="/register">go to Registration page</a>
+    <form method="post" action="/login" th:object="${loginRequest}" id="form">
+        <img class="_8idr img" src="https://static.xx.fbcdn.net/rsrc.php/v3/yO/r/zgulV2zGm8t.png" alt="" width="24" height="24" id="u_g_9_gZ">
+        <h1>Login </h1>
+        <label>
+            <input type="text" name="login" placeholder="user name" required>
+        </label>
+        <label for="password"></label><input type="password" name="password" id="password" placeholder="Password" required>
+                       <span class="cen-btn">
+                <button type="submit" class="btn1"> Submit</button>
+
+                </span>
+
     </form>
 </div>
 </body>
