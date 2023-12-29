@@ -12,7 +12,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: rgb(245, 195, 251);;
+    background: rgb(245, 210, 245);;
 }
 ::selection{
     color: #fff;

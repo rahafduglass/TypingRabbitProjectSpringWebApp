@@ -3,47 +3,34 @@ package com.example.simpleform;
 
 import jakarta.persistence.*;
 
-import java.util.Objects;
-
 @Entity
 @Table(name = "users_table", schema = "test_db")
 public class UsersModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
+    private Integer user_id;
 
-    String login;
-    String password;
-    String email;
+    private String login;
+    private String password;
+    private String email;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        UsersModel that = (UsersModel) o;
-        return Objects.equals(id, that.id) && Objects.equals(login, that.login) && Objects.equals(password, that.password) && Objects.equals(email, that.email);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, login, password, email);
-    }
 
     @Override
     public String toString() {
         return "UsersModel{" +
-                "id=" + id +
+                "id=" + user_id +
                 ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getUser_id() {
+        return user_id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
     }
 
     public String getLogin() {
@@ -69,4 +56,6 @@ public class UsersModel {
     public void setEmail(String email) {
         this.email = email;
     }
+
+
 }
