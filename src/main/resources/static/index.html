@@ -4,23 +4,34 @@
     <meta charset="UTF-8">
 
     <title>HOME PAGE</title>
+    <link rel="shotrcut icon" type="img/png" href="picture/rabbit.png">
     <style>
         body{
-            background-image: url("picture/typingRabbit.png") ;
-            background-repeat: no-repeat;
+            background: lavenderblush url("picture/rabbit.png") no-repeat fixed center;
+backdrop-filter: blur(4px);
         }
     </style>
+    <link rel="stylesheet" href="/Homepage.css">
 </head>
 <body>
 
-<div class="container">
-    <form id="form">
 
-<h1> Typing Rabbit </h1>
-<a href="/register"> go to registration </a> </br>
-<a href="/login"> go to log in </a></br>
-        <a href="/typingSpeedPage"> go to log in </a>
-    </form>
+
+<!--<h1> Typing Rabbit </h1>-->
+<!--<a href="/register"> go to registration </a> </br>-->
+<!--<a href="/login"> go to log in </a></br>-->
+<!--        <a href="/typingSpeedPage"> go to log in </a>-->
+
+<div class="container flex-center">
+    <div id="wrapper" class="flex-column flex-center">
+        <h1  style=" font-size: 80px;  -webkit-text-stroke: 3px white;  ">Typing Rabbit</h1>
+        <a class="btn" href="/login">Login</a>
+        <a class="btn" href="/register">Sign up</a>
+        <a class="btn" href="/typingSpeedPage">Default Test</a>
+        <a class="btn" href="/typingSpeedPage">Contact Us</a>
+    </div>
+</div>
+
 </div>
 </body>
 </html>

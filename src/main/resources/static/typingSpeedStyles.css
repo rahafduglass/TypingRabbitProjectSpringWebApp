@@ -12,11 +12,11 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: rgb(245, 210, 245);;
+    background: lavenderblush;
 }
 ::selection{
     color: #fff;
-    background: rgb(225, 123, 251);;
+    background: lavenderblush;
 }
 .wrapper{
     width: 770px;
