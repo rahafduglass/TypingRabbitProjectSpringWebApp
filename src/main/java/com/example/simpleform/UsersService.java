@@ -38,9 +38,10 @@ public class UsersService {
     public UsersModel getUserModelByUserLogin(String userLogin){
         return usersRepository.findByLogin(userLogin);
     }
-    public void updateSpeedTestReport(){
-
+    public UsersDetailsModel getUserDetailsModelByUserId(int user_id){
+        return usersDetailsRepository.findByUsersModelUserId(user_id);
     }
+
     public UsersDetailsModel updateUserDetails(String WPM, Integer user_id){
         UsersDetailsModel usersDetailsModel=usersDetailsRepository.findByUsersModelUserId(user_id);
 

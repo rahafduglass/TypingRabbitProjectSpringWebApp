@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login page</title>
+    <title>Login</title>
     <link rel="stylesheet" href="/login.css">
-    <link rel="shotrcut icon" type="img/png" href="https://th.bing.com/th/id/OIP.FWW7CW_Z0LxK6HgGDYpOlQHaHa?w=168&h=180&c=7&r=0&o=5&pid=1.7">
+    <link rel="shotrcut icon" type="img/png" href="/picture/rabbit.png">
     <script th:src="@{/js/login.js}" defer="defer"></script>
+    <script src="/js/particles.js"></script>
+
 </head>
 <body>
 
@@ -16,9 +18,10 @@
         <ul>
             <a href="/index.html"><li class="right-item">Home</li></a>
             <a href="/register"><li> Register </li></a>
+            <a href="/register"><li> Contact Us </li></a>
         </ul>
     </nav>
-</header>
+</header><br>
 <div class="container">
     <form method="post" action="/login" th:object="${loginRequest}" id="form">
         <img class="_8idr img" src="https://static.xx.fbcdn.net/rsrc.php/v3/yO/r/zgulV2zGm8t.png" alt="" width="24" height="24" id="u_g_9_gZ">
@@ -34,5 +37,6 @@
 
     </form>
 </div>
+<canvas id="particles-js"></canvas>
 </body>
 </html>

@@ -37,6 +37,7 @@ public class UsersController {
         return "typingSpeed_page";
     }
 
+
     @PostMapping("/register")
     public String register(@ModelAttribute UsersModel usersModel) { // the model Attribute's "registerRequest" values will be assigned to the userModel.
         System.out.println("register request: " + usersModel);
@@ -44,32 +45,38 @@ public class UsersController {
         if (registeredUser != null) {
             UsersDetailsModel createdUserDetails = usersService.createUserDetails(registeredUser.getUser_id());
             return "redirect:/login";
-        }else return  "error_page" ;
+        } else return "error_page";
     }
 
     @PostMapping("/login")
     public String login(@ModelAttribute UsersModel usersModel, Model model) {
         System.out.println("login request: " + usersModel);// will print the form input by the toString method
         Optional<UsersModel> authenticated = usersService.authenticate(usersModel.getLogin(), usersModel.getPassword());
+        usersModel.setUser_id(usersService.getUserModelByUserLogin(usersModel.getLogin()).getUser_id());
+        UsersDetailsModel usersDetailsModel = usersService.getUserDetailsModelByUserId(usersModel.getUser_id());
         if (authenticated.isPresent()) {
             model.addAttribute("userLogin", usersModel.getLogin());
+            model.addAttribute("userLastTest", usersDetailsModel.getLastTestSpeed());
+            model.addAttribute("userAvgSpeed", String.format("%.1f", usersDetailsModel.getAvgSpeedAllTime()));
+            model.addAttribute("userNumOfTests", usersDetailsModel.getNumOfTakenTests());
             getUserLoginAttribute(usersModel.getLogin());
-            return "typingSpeed_page";
+            return "UserTypingSpeed_page";
         } else
             return "error_page";
     }
+
     @ModelAttribute("userLogin")
-    public String getUserLoginAttribute(String userLogin){
+    public String getUserLoginAttribute(String userLogin) {
         return userLogin;
     }
 
     @PostMapping("/updateWPM")
     public ResponseEntity<String> saveWPM(@RequestBody Map<String, String> payload) {
         String WPM = payload.get("WPM");
-        String userName=payload.get("userName");
-        System.out.println("Received data from client:  " + WPM);
+        String userName = payload.get("userName");
+        System.out.println("Received data from client:  " + WPM + "  " + userName);
         //we are making simple app this is absolutely more complex.
-        UsersModel usersModel= usersService.getUserModelByUserLogin(userName);
+        UsersModel usersModel = usersService.getUserModelByUserLogin(userName);
         System.out.println("update request: " + usersModel);
         usersService.updateUserDetails(WPM, usersModel.getUser_id());
         return ResponseEntity.ok("Data received successfully");

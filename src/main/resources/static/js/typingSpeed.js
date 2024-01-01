@@ -1,3 +1,4 @@
+
 const typingText = document.querySelector(".typing-text p"),
     inpField = document.querySelector(".wrapper .input-field"),
     tryAgainBtn = document.querySelector(".content button"),
@@ -67,27 +68,39 @@ function initTyping() {
         //here we should fetch data.// backend
     }
 }
-function sendData(){
-    var WPM= $("#wpm").text();
-    var userName=$("#userName").text();
-    var requestData={
-        WPM:WPM,
-        userName: userName
-    }
-    $.ajax({
-        type: "POST",
-        url: "/updateWPM",
-        data: JSON.stringify(requestData),
-        contentType:"application/json; charset=utf-8",
-        dataType: "json",
 
-    })
-        // The function below has an ERROR AHAHA.
-        .done(function(response) {
-            console.log("Server response:", response);
+function sendData() {
+        var WPM = $("#wpm").text();
+        var userName = $("#userName").text();
+        var requestData = {
+            WPM: WPM,
+            userName: userName
+        }
+        $.ajax({
+            type: "POST",
+            url: "/updateWPM",
+            data: JSON.stringify(requestData),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+
         })
+    }
+function updateContent() {
+    var userName=$("#userName").text();
 
+    $.ajax({
+        url: '/userTypingSpeedPage', // Use an appropriate endpoint
+        type: 'GET',
+        dataType: JSON.stringify(userName),
+        error: function () {
+            console.error('Error updating content');
+        }
+    });
 }
+
+// Update content initially
+updateContent();
+
 function initTimer() { //this method will be called literally every second by the timer
     if(timeLeft > 0) {
         timeLeft--;
@@ -102,6 +115,9 @@ function initTimer() { //this method will be called literally every second by th
         clearInterval(timer);
     }
 }
+// script.js
+
+
 
 function resetGame() {
     loadParagraph();
