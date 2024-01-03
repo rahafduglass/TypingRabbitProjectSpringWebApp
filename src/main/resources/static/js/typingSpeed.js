@@ -85,21 +85,10 @@ function sendData() {
 
         })
     }
-function updateContent() {
-    var userName=$("#userName").text();
 
-    $.ajax({
-        url: '/userTypingSpeedPage', // Use an appropriate endpoint
-        type: 'GET',
-        dataType: JSON.stringify(userName),
-        error: function () {
-            console.error('Error updating content');
-        }
-    });
+function refreshPage(){
+    location.reload();
 }
-
-// Update content initially
-updateContent();
 
 function initTimer() { //this method will be called literally every second by the timer
     if(timeLeft > 0) {

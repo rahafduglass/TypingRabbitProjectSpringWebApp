@@ -4,18 +4,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', sans-serif;
 }
-body{
+body {
     height: 100%;
     width: 100%;
-    margin:0;
+    margin: 0;
     overflow: hidden;
-}
+    background: lavenderblush;
 
+}
 /******************header*************************/
 header{
-    background: rgb(72, 22, 85);
+    background: black;
 
     color:white;
     font-family: serif;
@@ -40,7 +41,7 @@ li{
 
 a:hover{
     cursor: pointer;
-    background:thistle;
+    background:rgb(177, 55, 207);
 
 }
 a{
@@ -61,9 +62,11 @@ a{
 
 .wrapper{
     width: 805px;
-    padding: 35px;
-    background: #ffffff;
-    border-radius: 10px;
+    padding: 39px;
+    background: black;
+    color: white;
+    font-family: Poppins,serif;
+    border-radius: 25px;
     box-shadow: 0 10px 15px rgba(0,0,0,0.05);
 }
 .wrapper .input-field{
@@ -74,7 +77,7 @@ a{
 .wrapper .content-box{
     padding: 13px 20px 0;
     border-radius: 10px;
-    border: 1px solid #000000;
+    border: 1px solid white;
 }
 .content-box .typing-text{
     overflow: hidden;

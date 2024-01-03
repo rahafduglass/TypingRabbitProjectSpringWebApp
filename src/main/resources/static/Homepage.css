@@ -12,8 +12,8 @@
 body {
     height: 100vh;
     font-size:20px ;
-    color: rosybrown;
-    font-family: Roboto, sans-serif;
+    color: black;
+    font-family: "Times New Roman", sans-serif;
 
 }
 
@@ -58,19 +58,24 @@ h1 {
 .btn {
     text-align: center;
     text-decoration: none;
-    color: rosybrown;
+    color: white;
+    font-size: 23px;
+    font-family: Times New Roman, serif;
+
 
     padding: 1rem;
     width: 20rem;
-    background-color: white;
-    border: 1px solid navy;
+    background-color: black;
+    border: 2px rosybrown;
     margin-bottom: 1rem;
 }
 
 .btn:hover {
-    cursor: pointer;
+
     /*   navy blue shadow */
-    box-shadow: 0 0.4rem 1.4rem rgba(0,0,128, 0.4);
+    box-shadow: 0 0.4rem 1.4rem black;
     transform: translateY(-1px);
     transition: translate 150ms;
+    background-color:rgb(177, 55, 207) ;
+    cursor:pointer;
 }

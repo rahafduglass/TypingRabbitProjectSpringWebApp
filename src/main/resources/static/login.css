@@ -3,10 +3,13 @@ body,html{
     height: 100%;
     margin:0;
     overflow: hidden;
-
+background: lavenderblush;
+    ;
     /* background: linear-gradient(to left,white,rgba(6, 211, 6, 0.918)); */
 }
-
+*{
+    font-family: "Times New Roman", serif;
+}
 
 /******************header*************************/
 header{
@@ -36,7 +39,8 @@ li{
 }
 a:hover{
     cursor: pointer;
-    background:rgb(72, 22, 85);
+    background:rgb(177, 55, 207);
+    color: black;
 
 }
 a{
@@ -96,7 +100,7 @@ input{
     width:20.5vh;
 }
 .btn1{
-    background:thistle;
+    background:rgb(72, 22, 85);;
     color:white;
     border-style: none;
     border-radius:20px;
@@ -110,7 +114,7 @@ input{
     margin:0 42vh 0;
 }
 .btn1:hover{
-    background-color:rgb(177, 55, 207) ;
+    background-color:rgb(177, 55, 207);
     cursor:pointer;
 }
 

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/typingSpeedStyles.css">
     <script th:src="@{/js/paragraphs.js}" defer="defer"></script>
     <script th:src= "@{/js/typingSpeed.js}" defer="defer"></script>
+    <script th:src="@{/js/signup.js}" defer="defer" ></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="shotrcut icon" type="img/png" href="/picture/rabbit.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,7 +61,7 @@
                     </li>
                 </ul>
                 <button>Try Again</button>
-                <button onclick="updateContent()" th:onclick="sendData()" >Save Test</button>
+                <button  th:onclick="sendData(), refreshPage()" >Save Test</button>
             </div>
         </div>
     </div>
