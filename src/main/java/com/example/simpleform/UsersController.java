@@ -37,7 +37,10 @@ public class UsersController {
         return "typingSpeed_page";
     }
 
-
+    @GetMapping("/contactUs")
+    public String getContactUsPage(Model model) {
+        return "contact_us_page";
+    }
     @PostMapping("/register")
     public String register(@ModelAttribute UsersModel usersModel) { // the model Attribute's "registerRequest" values will be assigned to the userModel.
         System.out.println("register request: " + usersModel);

@@ -77,7 +77,7 @@ function sendData() {
             userName: userName
         }
         $.ajax({
-            type: "POST",
+            type: "GET",
             url: "/updateWPM",
             data: JSON.stringify(requestData),
             contentType: "application/json; charset=utf-8",
