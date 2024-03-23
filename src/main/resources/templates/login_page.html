@@ -2,30 +2,41 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Login page</title>
-    <link rel="stylesheet" href="/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/login.css">
+    <link rel="shotrcut icon" type="img/png" href="/picture/rabbit.png">
+    <script th:src="@{/js/login.js}" defer="defer"></script>
+    <script src="/js/particles.js"></script>
+
 </head>
 <body>
+
+<header>
+    <h1></h1>
+    <nav>
+        <ul>
+            <a href="/index.html"><li class="right-item">Home</li></a>
+            <a href="/register"><li> Register </li></a>
+            <a href="/contactUs"><li> Contact Us </li></a>
+        </ul>
+    </nav>
+</header><br>
 <div class="container">
-    <form method="post" action="/login" th:object="${loginRequest}">
-        <h2>Login</h2>
-        <div class="input-box">
-            <i class="fa fa-user" aria-hidden="true"></i>
-            <label>
-                <input type="text" name="login" placeholder="Login" required>
-            </label>
-        </div>
-        <div class="input-box">
-            <i class="fa fa-unlock-alt" aria-hidden="true"></i>
-            <label>
-                <input type="password" name="password" placeholder="Password"  required>
-            </label>
-        </div>
-        <span class="cen-btn">
-            <button class="btn1" type="submit" name="sign-in" >Login</button>
-        </span >
-        <a href="/register">go to Registration page</a>
+    <form method="post" action="/login" th:object="${loginRequest}" id="form">
+
+        <h1>Login </h1>
+        <label>
+            <input type="text" name="login" placeholder="user name" required>
+        </label>
+        <label for="password"></label><input type="password" name="password" id="password" placeholder="Password" required>
+                       <span class="cen-btn">
+                <button type="submit" class="btn1"> Submit</button>
+
+                </span>
+
     </form>
 </div>
+<canvas id="particles-js"></canvas>
 </body>
 </html>

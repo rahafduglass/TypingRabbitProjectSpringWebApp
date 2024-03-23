@@ -9,4 +9,5 @@ import java.util.Optional;
 public interface UsersRepository extends CrudRepository<UsersModel, Integer> {
     Optional<UsersModel> findByLoginAndPassword(String login, String password);
     Optional<UsersModel> findFirstByLogin(String login); // to ensure that the written username in registration doesn't already exist.
+    UsersModel findByLogin(String login);
 }

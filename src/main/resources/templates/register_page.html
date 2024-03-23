@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="/styles.css">
+    <link rel="shotrcut icon" type="img/png" href="/picture/rabbit.png">
     <script th:src="@{/js/script.js}" defer="defer"></script>
 </head>
 <body>
@@ -12,16 +13,15 @@
     <h1></h1>
     <nav>
         <ul>
-            <a><li class="right-item">Home</li></a>
+            <a href="/index.html"><li class="right-item">Home</li></a>
             <a href="/login"><li>Login</li></a>
-            <a><li>Register</li></a>
-            <a><li>Contact us</li></a>
+            <a href="/contactUs"><li>Contact us</li></a>
         </ul>
     </nav>
 </header>
 <div class="container">
     <form id="form" method="post" action="/register" th:object="${registerRequest}"> <!-- when we submit this form it got stored in the registerRequest object or attribute-->
-        <img class="_8idr img" src="https://static.xx.fbcdn.net/rsrc.php/v3/yO/r/zgulV2zGm8t.png" alt="" width="24" height="24" id="u_g_9_gZ">
+
         <h1>Sign up </h1>
         <label>
             <input  type="text" name="login" placeholder="user_name" required>

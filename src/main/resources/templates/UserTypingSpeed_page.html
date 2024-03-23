@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Typing Rabbit</title>
+    <link rel="stylesheet" href="/typingSpeedStyles.css">
+    <script th:src="@{/js/paragraphs.js}" defer="defer"></script>
+    <script th:src= "@{/js/typingSpeed.js}" defer="defer"></script>
+    <script th:src="@{/js/signup.js}" defer="defer" ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="shotrcut icon" type="img/png" href="/picture/rabbit.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="/js/particles.js"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <ul class="main-nav">
+            <a href="/index.html"><li >Home</li></a> <!--login -->
+            <a href="/contactUs"><li>Contact us</li></a>
+            <a href="/index.html"><li>Logout </li></a>
+            <span  class="right-items">
+                 <li>Name: <span id="userName" th:text="${userLogin}"></span></li>
+                 <li>Last test: <span id="lastTest" th:text="${userLastTest}"></span></li>
+                   <li>Avg speed: <span th:text="${userAvgSpeed}"></span></li>
+            <li>num of tests: <span th:text="${userNumOfTests}"></span></li>
+
+                 </span>
+
+        </ul>
+    </nav>
+</header>
+<div class="center" >
+    <div class="wrapper">
+        <label>
+            <input type="text" class="input-field">
+        </label>
+        <div class="content-box">
+            <div class="typing-text">
+                <p></p>
+            </div>
+            <div class="content">
+                <ul class="result-details">
+                    <li class="time">
+                        <p>Time Left:</p>
+                        <span><b>60</b>s</span>
+                    </li>
+                    <li class="mistake">
+                        <p>Mistakes:</p>
+                        <span>0</span>
+                    </li>
+                    <li class="wpm" >
+                        <p>WPM:</p>
+                        <span id="wpm">0</span>
+                    </li>
+                    <li class="cpm">
+                        <p>CPM:</p>
+                        <span>0</span>
+                    </li>
+                </ul>
+                <button>Try Again</button>
+                <button  th:onclick="sendData(), refreshPage()" >Save Test</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

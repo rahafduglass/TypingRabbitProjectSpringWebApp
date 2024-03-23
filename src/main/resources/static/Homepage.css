@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* reset*/
+:root {
+    font-size: 62.5%;
+}
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-size:20px ;
+    color: black;
+    font-family: "Times New Roman", sans-serif;
+
+}
+
+/* layout */
+.container {
+    height: 100vh;
+    width: 100vw;
+    max-width: 800px;
+    margin: 0 auto;
+
+    /*   display: flex;
+      justify-content: center;
+      align-items: center; */
+}
+
+#wrapper {
+    width: 100%;
+    padding: 2rem;
+    /*   display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; */
+}
+
+/* Utitlity classes */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+/*looks  */
+h1 {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    font-family: Times New Roman, serif;
+
+
+    padding: 1rem;
+    width: 20rem;
+    background-color: black;
+    border: 2px rosybrown;
+    margin-bottom: 1rem;
+}
+
+.btn:hover {
+
+    /*   navy blue shadow */
+    box-shadow: 0 0.4rem 1.4rem black;
+    transform: translateY(-1px);
+    transition: translate 150ms;
+    background-color:rgb(177, 55, 207) ;
+    cursor:pointer;
+}
