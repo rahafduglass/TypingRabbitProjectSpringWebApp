@@ -1,0 +1,1 @@
+a real-time spring web app, it tests the user's typing speed, stores the tests data in the local database(postgreSQL), my role in this project was writing the backend in Java using spring web framework, and connecting the code with the database using JPA spring data. 
